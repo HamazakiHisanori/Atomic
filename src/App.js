@@ -1,8 +1,12 @@
+import "./styles.css";
+
 import { PrimaryButton } from "./components/atoms/buttons/PrimaryButton";
 import { SecondaryButton } from "./components/atoms/buttons/SecondaryButton";
 import { SeaechInput } from "./components/molecules/SearchInput";
 import { UserCard } from "./components/organisms/UserCard";
-import "./styles.css";
+import { HeaderOnly } from "./components/templates/HeaderOnly";
+import { BrowserRouter } from "react-router-dom";
+import { DefaultLayout } from "./components/templates/Defailt.Layout";
 
 const user = {
   image: "https://source.unsplash.com/tW0Ix_Ajg6Y",
@@ -17,11 +21,13 @@ const user = {
 
 export default function App() {
   return (
-    <div className="App">
-      <PrimaryButton>テスト</PrimaryButton>
-      <SecondaryButton>検索</SecondaryButton>
-      <SeaechInput />
-      <UserCard user={user} />
-    </div>
+    <BrowserRouter>
+      <DefaultLayout>
+        <PrimaryButton>テスト</PrimaryButton>
+        <SecondaryButton>検索</SecondaryButton>
+        <SeaechInput />
+        <UserCard user={user} />
+      </DefaultLayout>
+    </BrowserRouter>
   );
 }
