@@ -1,7 +1,6 @@
 import styled from "styled-components";
-
-import { BaseCard } from "../atoms/card/BaseCard";
-import { UserIconWithName } from "../molecules/user/UserIconWithName";
+import { BaseCard } from "../../atoms/card/BaseCard";
+import { UserIconWithName } from "../../molecules/user/UserIconWithName";
 
 export const UserCard = (props) => {
   const { user } = props;
