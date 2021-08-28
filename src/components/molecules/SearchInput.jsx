@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BaseInput } from "../atoms/input/BaseInput";
 import { PrimaryButton } from "../atoms/buttons/PrimaryButton";
 
-export const SeaechInput = () => {
+export const SearchInput = () => {
   return (
     <SContainer>
       <BaseInput placeholder="検索条件を入力" />
